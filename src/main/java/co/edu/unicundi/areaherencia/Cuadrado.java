@@ -1,38 +1,29 @@
 package co.edu.unicundi.areaherencia;
 
-import static java.lang.Math.pow;
 import java.util.Scanner;
 
 /**
  *
  * @author acer
  */
-public class Cuadrado extends Area{
-    public void cua(){
+public class Cuadrado extends AreaPerimetro{
+    public void cuadrado(){
         Scanner  entrada=new Scanner(System.in);
+        double lado;
         
-        System.out.println("Ingrese la base del cuadrado");
-        super.base=entrada.nextDouble();
+        System.out.println("\nIngrese un lado del cuadrado");
+        lado=entrada.nextDouble();
 
-        System.out.println("Ingrese la altura del cuadrado");
-        super.altura=entrada.nextDouble();
-        area(base,altura);
-        perimetro(base,altura);
-        resultados();
+        super.resultados(area(lado), perimetro(lado));
     }
     
-    public double area(double base, double altura){
-        super.area = base*altura;
+    public double area(double lado){
+        super.area = lado*lado;
         return area;
     }
     
-    public double perimetro(double base, double altura){
-        super.perimetro = (base*2)+(altura*2);
+    public double perimetro(double lado){
+        super.perimetro = lado*4;
         return perimetro;
-    }
-    
-    public void resultados(){
-        System.out.println("El area del ciruclo es: " + area(base,altura));
-        System.out.println("El perimetro del circulo es: " + perimetro(base,altura));
     }
 }
