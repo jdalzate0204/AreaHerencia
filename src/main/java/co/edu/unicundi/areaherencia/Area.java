@@ -10,11 +10,10 @@ package co.edu.unicundi.areaherencia;
  * @author User
  */
 public class Area {
-    
     double area;
     double perimetro;
-    
-    
-   
+    double base;
+    double altura;
+    double resultado;
     
 }

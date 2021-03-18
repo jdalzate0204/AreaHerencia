@@ -1,4 +1,3 @@
-
 package co.edu.unicundi.areaherencia;
 
 import static java.lang.Math.pow;
@@ -39,6 +38,4 @@ public class Circulo extends Area{
         System.out.println("El area del ciruclo es: " + area(radio,pi));
         System.out.println("El perimetro del circulo es: " + perimetro(radio,pi));
     }
-    
-   
 }
