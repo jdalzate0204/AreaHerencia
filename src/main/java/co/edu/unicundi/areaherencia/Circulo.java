@@ -24,8 +24,6 @@ public class Circulo extends AreaPerimetro{
         
         System.out.println("\nIngrese el radio del circulo");
         radio=entrada.nextDouble();
-        //Muestra el resultado de area y perimetro del circulo
-        super.resultados(area(), perimetro());
     }
     
     /**
@@ -46,5 +44,13 @@ public class Circulo extends AreaPerimetro{
     public double perimetro() {
         super.setPerimetro(2*PI*radio);
         return getPerimetro();
+    }
+    /**
+     * Se muestra resultado(Metodo extendido de clase padre)
+     */
+    @Override
+    public void resultados() {
+        System.out.println("El area del circulo es: " + area());
+        System.out.println("El perimetro del circulo es: " + perimetro());
     }
 }

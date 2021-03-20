@@ -19,8 +19,6 @@ public class Cuadrado extends AreaPerimetro{
         
         System.out.println("\nIngrese un lado del cuadrado");
         lado=entrada.nextDouble();
-        //Muestra el resultado de area y perimetro del cuadrado
-        super.resultados(area(), perimetro());
     }
 
     /**
@@ -41,5 +39,14 @@ public class Cuadrado extends AreaPerimetro{
     public double perimetro() {
         super.setPerimetro(lado*4);
         return getPerimetro();
+    }
+
+    /**
+     * Se muestra resultado(Metodo extendido de clase padre)
+     */
+    @Override
+    public void resultados() {
+        System.out.println("El area del cuadrado es: " + area());
+        System.out.println("El perimetro del cuadrado es: " + perimetro());
     }
 }

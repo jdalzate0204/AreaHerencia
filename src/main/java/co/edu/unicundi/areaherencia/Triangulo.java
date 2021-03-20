@@ -37,8 +37,6 @@ public class Triangulo extends AreaPerimetro {
         lado2=entrada.nextDouble();
         System.out.println("Ingrese el lado 3 del triangulo");
         lado3=entrada.nextDouble();
-        //Muestra el resultado de area y perimetro del triangulo
-        super.resultados(area(), perimetro());
     }
 
     /**
@@ -59,5 +57,14 @@ public class Triangulo extends AreaPerimetro {
     public double perimetro() {
         super.setPerimetro(lado1+lado2+lado3);
         return getPerimetro();
+    }
+
+    /**
+     * Se muestra resultado(Metodo extendido de clase padre)
+     */
+    @Override
+    public void resultados() {
+        System.out.println("El area del triangulo es: " + area());
+        System.out.println("El perimetro del triangulo es: " + perimetro());
     }
 }

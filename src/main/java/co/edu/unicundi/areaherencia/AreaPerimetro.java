@@ -17,15 +17,9 @@ public abstract class AreaPerimetro implements ICalculos{
     private double perimetro;
     
     /**
-     * Metodo que muestra los resultados 
-     * @param resultadoA
-     * @param resultadoP 
+     * Metodo abstracto que muestra los resultados
      */
-    public void resultados(double resultadoA, double resultadoP){
-        //Impresion resultado de area y perimetro
-        System.out.println("El area es: " + resultadoA);
-        System.out.println("El perimetro es: " + resultadoP);
-    }
+    public abstract void resultados();
 
     /**
      * Retorna la variable area
