@@ -10,42 +10,41 @@ import java.util.Scanner;
  * @version 1.0.1
  */
 public class Circulo extends AreaPerimetro{
+    /**
+     * Indica el radio del circulo
+     */
+    double radio;
+    /**
+     * Se define el valor de pi (Constante)
+     */
+    final double PI = 3.1416;
+    
     public void circulo(){
         Scanner entrada = new Scanner(System.in);
-        /**
-         * indica el radio del circulo
-         */
-        double radio;
-        /**
-         * se define el valor de pi (Constante)
-         */
-        final double PI = 3.1416;
         
         System.out.println("\nIngrese el radio del circulo");
         radio=entrada.nextDouble();
-        //muestra el resultado de area y perimetro del circulo
-        super.resultados(area(radio,PI), perimetro(radio,PI));
+        //Muestra el resultado de area y perimetro del circulo
+        super.resultados(area(), perimetro());
     }
     
     /**
      * Se calcula el area del circulo
-     * @param radio
-     * @param pi
-     * @return 
+     * @return getArea()
      */
-    public double area(double radio,double pi) {
-        super.area=pi*pow(radio,2);
-        return area;
+    @Override
+    public double area() {
+        super.setArea(PI*pow(radio,2));
+        return getArea();
     }
-    
+
     /**
      * Se calcula el perimetro del circulo
-     * @param radio
-     * @param pi
-     * @return 
+     * @return getPerimetro()
      */
-    public double perimetro(double radio,double pi){
-        super.perimetro=2*pi*radio;
-        return perimetro;
+    @Override
+    public double perimetro() {
+        super.setPerimetro(2*PI*radio);
+        return getPerimetro();
     }
 }

@@ -9,36 +9,37 @@ import java.util.Scanner;
  * @version 1.0.1
  */
 public class Cuadrado extends AreaPerimetro{
+    /**
+     * Indica el lado del cuadrado
+     */
+    double lado;
+    
     public void cuadrado(){
         Scanner  entrada=new Scanner(System.in);
-        /**
-         * Indica el lado del cuadrado
-         */
-        double lado;
         
         System.out.println("\nIngrese un lado del cuadrado");
         lado=entrada.nextDouble();
-         //muestra el resultado de area y perimetro del cuadrado
-        super.resultados(area(lado), perimetro(lado));
+        //Muestra el resultado de area y perimetro del cuadrado
+        super.resultados(area(), perimetro());
     }
-    
+
     /**
      * Se calcula el area del cuadrado
-     * @param lado
-     * @return 
+     * @return getArea()
      */
-    public double area(double lado){
-        super.area = lado*lado;
-        return area;
+    @Override
+    public double area() {
+        super.setArea(lado*lado);
+        return getArea();
     }
-    
+
     /**
      * Se calcula el perimetro del cuadrado
-     * @param lado
-     * @return 
+     * @return getPerimetro()
      */
-    public double perimetro(double lado){
-        super.perimetro = lado*4;
-        return perimetro;
+    @Override
+    public double perimetro() {
+        super.setPerimetro(lado*4);
+        return getPerimetro();
     }
 }

@@ -9,22 +9,23 @@ import java.util.Scanner;
  * @version 1.0.1
  */
 public class Triangulo extends AreaPerimetro {
+    /**
+     * Indica la base del triangulo
+     */
+    double base;
+    /**
+     * Indica la altura del triangulo
+     */
+    double altura;
+    /**
+     * Indica los lados del triangulo
+     */
+    double lado1;
+    double lado2;
+    double lado3;   
+    
     public void triangulo(){
         Scanner entrada=new Scanner(System.in);
-        /**
-         * Indica la base del triangulo
-         */
-        double base;
-        /**
-         * Indica la altura del triangulo
-         */
-        double altura;
-        /**
-         * Indica los lados del triangulo
-         */
-        double lado1;
-        double lado2;
-        double lado3;
         
         System.out.println("\nIngrese la base del triangulo");
         base=entrada.nextDouble();
@@ -36,30 +37,27 @@ public class Triangulo extends AreaPerimetro {
         lado2=entrada.nextDouble();
         System.out.println("Ingrese el lado 3 del triangulo");
         lado3=entrada.nextDouble();
-        //muestra el resultado de area y perimetro del triangulo
-        super.resultados(area(base,altura), perimetro(lado1,lado2,lado3));
+        //Muestra el resultado de area y perimetro del triangulo
+        super.resultados(area(), perimetro());
     }
-    
+
     /**
      * Se calcula el area del triangulo
-     * @param base
-     * @param altura
-     * @return 
+     * @return getArea()
      */
-    public double area(double base, double altura){
-        super.area = (base*altura)/2;
-        return area;
+    @Override
+    public double area() {
+        super.setArea((base*altura)/2);
+        return getArea();
     }
-    
+
     /**
      * Se calcula el perimetro del triangulo
-     * @param lado1
-     * @param lado2
-     * @param lado3
-     * @return 
+     * @return getPerimetro()
      */
-    public double perimetro(double lado1, double lado2,double lado3){
-        super.perimetro = lado1+lado2+lado3;
-        return perimetro;
+    @Override
+    public double perimetro() {
+        super.setPerimetro(lado1+lado2+lado3);
+        return getPerimetro();
     }
 }
